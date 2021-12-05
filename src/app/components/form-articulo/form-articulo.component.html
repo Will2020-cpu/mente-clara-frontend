@@ -1,11 +1,47 @@
-<div class="mt-8 mx-auto py-12 px-8">
-    <div class="">
-        <h1></h1>
+<div class="
+    max-w-2xl
+    mx-auto
+    py-24
+    px-4
+    grid
+    items-center
+    grid-cols-1
+    gap-y-16 gap-x-8
+    sm:px-6 sm:py-32
+    lg:max-w-2xl lg:px-8 lg:grid-cols-1">
+    <div class="space-y-4">
+        <h2
+        class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+      >
+        Publica tu articulo!
+      </h2>
+        <form [formGroup]="formGroup" class="max-w-2xl border rounded-sm">
+            <div class="py-4">
+                <div class="flex flex-col p-4">
+                    <label for="label-title" class="font-extrabold tracking-tight">Titulo</label>
+                    <input type="text" formControlName="titulo" class="border rounded-sm outline-none p-2 focus:ring-2 focus:ring-green-500" id="label-title" />
+                </div>
+                <div class="flex flex-col p-4">
+                    <label for="label-descripcion" class="font-extrabold tracking-tight">Descripcion</label>
+                    <textarea formControlName="descripcion" class="border rounded-sm outline-none p-2 focus:ring-2 focus:ring-green-500 resize-none" name="desc" id="label-descripcion" cols="30" rows="10"></textarea>
+                </div>
+                <div class="flex flex-col p-4">
+                    <label for="label-autor" class="font-extrabold tracking-tight">Autor</label>
+                    <input formControlName="autor" type="text" class="border rounded-sm outline-none p-2 focus:ring-2 focus:ring-green-500" id="label-autor" />
+                </div>
+                <div class="flex flex-col p-4">
+                    <select formControlName="categoria" class="bg-transparent outline-none p-2 border">
+                        <option *ngFor="let c of categorias" [ngValue]="c">
+                            {{c}}
+                        </option>
+                      </select>
+                </div>
+                <div class="flex flex-col p-4">
+                    <button       [disabled]="formGroup.invalid"
+                    type="submit" (click)="agregarArticulo()" class="bg-green-500 p-2 text-white rounded-sm font-extrabold" >Publicar</button>
+                </div>
+            </div>
+        </form>
     </div>
-    <form [formGroup]="formGroup" class="px-10">
-        <div class="flex flex-col">
-            <label for="label-title">Titulo</label>
-            <input type="text" class="border rounded-sm outline-none p-2" id="label-title" />
-        </div>
-    </form>
+
 </div>

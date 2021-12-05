@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { articulosModel } from 'src/app/models/articulo.models';
+import { ArticulosModel } from 'src/app/models/articulo.models';
 import { ArticuloService } from 'src/app/services/articulo.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { ArticuloService } from 'src/app/services/articulo.service';
 })
 export class ArtComponent implements OnInit {
 
-  public articulos: articulosModel[] = [];
+  public articulos: ArticulosModel[] = [];
 
   constructor(private articuloService:ArticuloService ) { }
 
@@ -17,5 +17,9 @@ export class ArtComponent implements OnInit {
     this.articulos = await this.articuloService.getArticulos();
     console.log(this.articulos)
   }
-
+   public eliminarArticulo(id:number){
+    this.articuloService.eliminarArticulo(id).then(async response =>{
+      this.articulos = await this.articuloService.getArticulos();
+    })
+   }
 }

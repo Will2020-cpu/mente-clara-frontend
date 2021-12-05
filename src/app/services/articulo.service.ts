@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { articulosModel } from '../models/articulo.models'
+import { ArticulosModel } from '../models/articulo.models'
 
 
 @Injectable({
@@ -19,8 +19,12 @@ export class ArticuloService {
     return this.http.get(`${environment.apiUrl}/api/articulos/get/${id}`).toPromise();
   }
 
-  public agregarArticulos(Articulo: articulosModel):Promise<any>{
+  public agregarArticulos(Articulo: ArticulosModel):Promise<any>{
     const url = `${environment.apiUrl}/api/articulos/add`
     return this.http.post(url,Articulo).toPromise();
+  }
+
+  public eliminarArticulo(id:number):Promise<any>{
+    return this.http.delete(`${environment.apiUrl}/api/articulos/delete/${id}`).toPromise();
   }
 }

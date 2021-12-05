@@ -10,6 +10,7 @@ import { ArticuloComponent } from './components/articulo/articulo.component';
 import { ArtComponent } from './components/art/art.component';
 import { FormArticuloComponent } from './components/form-articulo/form-articulo.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SimpleModalModule } from 'ngx-simple-modal';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SimpleModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

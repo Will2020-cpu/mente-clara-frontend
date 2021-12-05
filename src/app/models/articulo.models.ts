@@ -1,4 +1,4 @@
-export interface articulosModel {
+export interface ArticulosModel {
     id: number,
     titulo: string,
     descripcion: string,
