@@ -11,6 +11,7 @@ import { ArtComponent } from './components/art/art.component';
 import { FormArticuloComponent } from './components/form-articulo/form-articulo.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SimpleModalModule } from 'ngx-simple-modal';
+import {MediaComponent } from './components/media/media.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +20,14 @@ import { SimpleModalModule } from 'ngx-simple-modal';
     ArticuloComponent,
     ArtComponent,
     FormArticuloComponent,
+    MediaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    SimpleModalModule
+    SimpleModalModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
