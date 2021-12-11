@@ -12,6 +12,8 @@ import { FormArticuloComponent } from './components/form-articulo/form-articulo.
 import { ReactiveFormsModule } from '@angular/forms';
 import { SimpleModalModule } from 'ngx-simple-modal';
 import {MediaComponent } from './components/media/media.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import {MediaComponent } from './components/media/media.component';
     ArticuloComponent,
     ArtComponent,
     FormArticuloComponent,
-    MediaComponent
+    MediaComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
