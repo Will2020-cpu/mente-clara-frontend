@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:'media',component:MediaComponent},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
-  {path:'',component:ArticuloComponent}
+  {path:'',component:MediaComponent}
 ];
 
 @NgModule({

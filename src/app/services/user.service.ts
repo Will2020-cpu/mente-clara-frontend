@@ -20,5 +20,4 @@ export class UserService {
     const url = `${this.apiUrl}/login/signup`
     return this.http.post(url,User).toPromise();
   }
-  
 }
