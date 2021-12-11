@@ -2,3 +2,8 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+body {
+    font-family: "Montserrat";
+    background: #242c39;
+    color: #fff;
+}
